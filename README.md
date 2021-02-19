@@ -1,6 +1,6 @@
 # Chuck Norris Jokes
 
-## How to start
+## How to start?
 
 ```console
 foo@bar:~$ yarn && yarn build
