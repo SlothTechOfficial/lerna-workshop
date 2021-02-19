@@ -1,0 +1,13 @@
+{
+  "name": "translate-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "offline": "sls offline"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.846.0",
+    "serverless-offline": "^6.8.0"
+  }
+}

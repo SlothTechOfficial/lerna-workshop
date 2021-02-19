@@ -1,23 +1,41 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { ChuckNorris } from '@lerna-workshop/services';
+import { languages } from '@lerna-workshop/core';
+import { Logo, Blockquote, Controls, Translate } from './components';
 
 function App() {
+
+  const [isLoadingJoke, setLoadingJoke] = useState(false);
+  const [joke, setJoke] = useState('Empty joke');
+
+  const nextJoke = () => {
+    setLoadingJoke(true);
+     ChuckNorris.Joke().then(reply => {
+      setJoke(reply.value);
+      setLoadingJoke(false);
+     });
+  }
+
+  const onEndTranslate = (result) => {
+    setJoke(result);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Logo />
+        <Blockquote message={ joke } />
+        {
+          !isLoadingJoke &&
+            <Controls 
+              onPressNext={nextJoke}
+            />
+        }
+        <br />
+        <br />
+        Language <Translate onEndTranslate={onEndTranslate} Languages={languages} message={ joke } />
+        
     </div>
   );
 }

@@ -14,7 +14,8 @@
     "lerna": "^3.22.1"
   },
   "scripts": {
+    "prebuild": "lerna bootstrap",
     "lerna:init": "lerna init",
-    "lerna:bootstrap": "lerna bootstrap"
+    "build": "lerna run build"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "name": "@lerna-workshop/services",
+  "version": "1.0.0",
+  "author": "TheGame404 <francis.tec.can@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "echo 'do nothing'"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
