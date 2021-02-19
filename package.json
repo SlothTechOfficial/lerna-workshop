@@ -1,0 +1,21 @@
+{
+  "name": "lerna-workshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:SlothTechOfficial/lerna-workshop.git",
+  "author": "TheGame404 <francis.tec.can@gmail.com>",
+  "license": "MIT",
+  "useWorkspaces": true,
+  "private": true,
+  "workspaces": [
+     "packages/*"
+  ] ,
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "scripts": {
+    "prebuild": "lerna bootstrap",
+    "lerna:init": "lerna init",
+    "build": "lerna run build"
+  }
+}

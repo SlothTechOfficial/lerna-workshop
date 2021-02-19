@@ -1,0 +1,13 @@
+{
+    "name": "@lerna-workshop/core",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:SlothTechOfficial/lerna-workshop.git",
+    "author": "TheGame404 <francis.tec.can@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+      "build": "echo 'do nothing'"
+    }
+  }
+  
